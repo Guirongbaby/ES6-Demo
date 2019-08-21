@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="item" style="border:1px solid red;width:100px;">
+
+        123 -->
+
+        <input type="button" value="按钮1">
+        <input type="button" value="按钮2">
+    </div>
+    </body>
+    <script>
+        // var doc = document;
+        // var div = doc.querySelector(".item");
+        // div.addEventListener("mouseover", function (e) {
+        //     console.log(this.offsetLeft);
+        // })
+        // console.log(div);
+        window.onload= function(){
+            var aBtn = document.getElementsByTagName('input');
+            for (let i = 0 ;i < aBtn.length;i++){
+                aBtn[i].onclick = function(){
+                    alert(i);
+                };
+            }
+        }
+    
+    </script>
+
+</html>
