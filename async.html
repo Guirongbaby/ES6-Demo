@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="txt1" value="">
+  <input type="text" id="txt2" value="">
+  <input type="text" id="txt3" value="">
+  <script>
+    let k = { 
+      notice() {
+        this.subscribers.forEach(item => item(this.age))
+      },
+      subscribers: []
+    }
+    
+    Object.defineProperty(k, 'age', {
+      configurable: true,
+      get() {
+        return k._age
+      },
+      set(val) {
+        k._age = val;
+        k.notice(val);
+      }
+    })
+
+    let t1 = document.getElementById('txt1');
+    let t2 = document.getElementById('txt2');
+    let t3 = document.getElementById('txt3');
+
+    t1.t1UpddateValue =(val) => {
+      t1.value = val;
+    };
+    t2.t2UpddateValue =(val) => {
+      t2.value = val;
+    };
+    t3.t3UpddateValue =(val) => {
+      t3.value = val;
+    };
+
+    k.subscribers.push(t1.t1UpddateValue);
+    k.subscribers.push(t2.t2UpddateValue);
+    k.subscribers.push(t3.t3UpddateValue);
+
+    k.age = 20;
+    // k.notice();
+  </script>
+</body>
+</html>
+

@@ -99,3 +99,4 @@ async function joinFile(f1, f2, f3) {
 joinFile(f1, f2, f3).then(data => {
     console.log('最后的输出！');
 })
+

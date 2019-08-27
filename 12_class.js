@@ -6,7 +6,7 @@ function Person(name = 'aicoder', age = 19) {
 }
 
 Person.prototype.show = function () {
-    console.log(this.name, this.age);
+    console.log(this.name, this.age);  // xixi 19 
 }
 
 let p = new Person('xixi');

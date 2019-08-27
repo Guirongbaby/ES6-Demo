@@ -14,4 +14,4 @@ export function show() {
 export let [a, b, c] = [1, 2, 3];
 
 let k = 10;
-export default k;  // 只有default  的时候 ， 后面才可以跟变量的名字
+export default k;  // 只有  default  的时候 ， 后面才可以跟变量的名字
